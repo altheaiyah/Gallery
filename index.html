@@ -74,6 +74,46 @@
         <div class="row justify-content-center" id="members">
         </div>
     </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12 order-1 order-md-2">
+                <div class="d-block d-md-none bg-light text-dark m-0 p-3 rounded-0 p-0">
+                    <h1 class="display-1 fw-bold text-center">ARMY</h1>
+                    <p class="p-4 text-justify">
+                        "A.R.M.Y" stands for "Adorable Representative M.C. for Youth" and it carries quite some meaning behind it, 
+                        given that "Army" is associated with the military, body armor, and how those two things are always together, 
+                        the fandom name basically means that fans will always be together with BTS.
+                    </p>
+                </div>
+            </div>
+            <div class="col-12 order-2 order-md-1">
+                <div class="card text-white rounded-0 border-0 mt-5 pt-5">
+                    <img src="img/lightstick/ocean.jpg" class="card-img rounded-0" alt="...">
+                    <div class="card-img-overlay d-none d-md-flex flex-column justify-content-end rounded-0 p-0">
+                        <div class="bg-light bg-opacity-75 text-dark">
+                            <h1 class="card-title display-1 fw-bold text-center">ARMY</h1>
+                            <p class="card-text px-5 pb-4 text-start">
+                                "A.R.M.Y" stands for "Adorable Representative M.C. for Youth" and it carries quite some meaning behind it, 
+                                given that "Army" is associated with the military, body armor, and how those two things are always together, 
+                                the fandom name basically means that fans will always be together with BTS.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1 class="display-1 fw-bold text-center pt-3 mt-5 pt-5">ARMY Bomb Lightstick</h1>
+            </div>
+        </div>
+        <div class="row justify-content-center" id="content">
+        </div>
+    </div>
     
     <div class="bg-white border-top py-3 mt-5">
         <div class="container text-center">
@@ -96,10 +136,10 @@
     </script>
     <script src="profiles.js"></script>
     <script>
-        var content = document.getElementById("members");
+        var members = document.getElementById("members");
 
         for (var i = 0; i < profiles.length; i++) {
-            content.innerHTML += `
+            members.innerHTML += `
             <div class="col-12 col-md-4 col-lg-3">
                 <div class="card shadow my-3">
                     <img src="`+ profiles[i].picture + `" class="card-img-top rounded-0">
@@ -110,6 +150,26 @@
                             <small class="card-text fw-normal"> Birth Name: ` + profiles[i].birthName + `</small><br>
                             <small class="card-text fw-normal"> Birthday: ` + profiles[i].birthday + `</small><br>
                             <small class="card-text fw-normal"> Representative Emoji:` + profiles[i].representativeEmoji + `</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          `;
+        }
+    </script>
+    <script src="content.js"></script>
+    <script>
+        var content = document.getElementById("content");
+
+        for (var i = 0; i < lightstick.length; i++) {
+            content.innerHTML += `
+            <div class="col-12 col-md-4 col-lg-3">
+                <div class="card shadow my-3">
+                    <img src="`+ lightstick[i].picture + `" class="card-img-top rounded-0">
+                    <div class="card-body  m-0 p-2 rounded-0">
+                        <h2 class="card-title fw-bold">` + lightstick[i].title + `</h2>
+                        <div class="mt-2">
+                            <small class="card-text fw-normal">` + lightstick[i].description + `</small><br>
                         </div>
                     </div>
                 </div>
